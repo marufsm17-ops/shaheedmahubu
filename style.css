@@ -1,0 +1,402 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f2f2f2;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+header {
+    background: #8B0000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 10px 0 0 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background: #fff;
+    color: #8B0000;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hamburger span {
+    background: #fff;
+    height: 4px;
+    width: 30px;
+    margin: 4px 0;
+    border-radius: 2px;
+    display: block;
+}
+
+/* Home Section */
+.home-section {
+    margin-top: 105px;
+    padding: 0;
+}
+
+.home-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.home-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(139,0,0,0.55);
+    z-index: 1;
+}
+
+.home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+}
+
+.home-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #8B0000;
+    color: #fff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(139,0,0,0.12);
+}
+
+.btn:hover {
+    background: #b22222;
+}
+
+/* About Section */
+.about-section {
+    background: #fff;
+    padding: 60px 0 30px 0;
+}
+
+.about-section h2 {
+    color: #8B0000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-content h3 {
+    margin-top: 15px;
+    color: #8B0000;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* Activities Section */
+.activities-section {
+    background: #f9f9f9;
+    padding: 60px 0;
+}
+
+.activities-section h2 {
+    color: #8B0000;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.activities-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.activity {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(139,0,0,0.06);
+    padding: 20px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.activity img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.activity h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.activity p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Donate Section */
+.donate-section {
+    background: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.donate-section h2 {
+    color: #8B0000;
+    margin-bottom: 20px;
+}
+
+.donate-section .btn {
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #f9f9f9;
+    padding: 60px 0;
+}
+
+.contact-section h2 {
+    color: #8B0000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-top: 25px;
+    color: #333;
+    font-size: 1rem;
+}
+
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(139,0,0,0.08);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8B0000;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background: #f7f7f7;
+    transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border: 1.5px solid #8B0000;
+    outline: none;
+}
+
+#formMsg {
+    margin-top: 15px;
+    color: #8B0000;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #8B0000;
+    color: #fff;
+    padding: 30px 0 10px 0;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer-social {
+    margin: 10px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-social img {
+    width: 28px;
+    filter: invert(1);
+    transition: filter 0.2s;
+}
+
+.footer-social a:hover img {
+    filter: invert(0.4);
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffe6e6;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .activities-list {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+    .activity {
+        max-width: 100%;
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.2rem;
+        padding: 8px 0;
+    }
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #8B0000;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100vw;
+        box-shadow: 0 2px 8px rgba(139,0,0,0.06);
+        z-index: 1001;
+    }
+    nav .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .home-image,
+    .home-image img {
+        height: 250px;
+    }
+    .home-content h2 {
+        font-size: 1.5rem;
+    }
+    .home-section {
+        margin-top: 90px;
+    }
+    .about-section,
+    .activities-section,
+    .donate-section,
+    .contact-section {
+        padding: 30px 0;
+    }
+    form {
+        padding: 15px;
+    }
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
